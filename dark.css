@@ -1,0 +1,47 @@
+body{
+    background-color: hsl(230, 17%, 14%);
+    background-image: linear-gradient(hsl(232, 19%, 15%), hsl(232, 19%, 15%));
+}
+.title{
+    color: white;
+}
+.subtitle{
+    color: hsl(228, 34%, 66%);
+}
+.dark-mode{
+    color: white;
+}
+.global-stats-item{
+    background-color: hsl(228, 28%, 20%);
+    color: hsl(228, 34%, 66%);
+}
+.global-stats-item:hover{ 
+    background-color: hsl(228, 28%, 26%);
+    cursor: pointer;
+}
+.followers-number{
+    color:white;
+}
+.today-title{
+    color:white;
+}
+.today-stats-item{
+    background-color: hsl(228, 28%, 20%)
+}
+.today-stats-item:hover{ 
+    background-color: hsl(228, 28%, 26%);
+    cursor: pointer;
+}
+.stats-description{
+    color: hsl(228, 34%, 66%);
+}
+.stats-number{
+   color: white;
+}
+
+@media screen and (max-width: 450px) {
+    .title{
+        border-bottom: 1px solid #373A4D ;
+    }
+
+}

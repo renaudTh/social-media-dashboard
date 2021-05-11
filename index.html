@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="light.css">
+  <link rel="stylesheet" href="dark.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <article id="content">
+    <section class='dashboard'>
+      <header id='global-header'>
+        <div class='title'><p>Social Media Dashboard</p>
+          <p class='subtitle'>Total Followers: 23,004</p>
+        </div>
+        <div class='dark-mode'>Dark Mode
+          <label class="switch">
+            <input type="checkbox" id='checkBox'>
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </header>
+      <div class='global-stats'>
+        <div class='global-stats-item' id='global-facebook'>
+          <div class='tagname'><img src="./images/icon-facebook.svg" class='media-logo'>@nathanf</div>
+          <div class='followers-number'>1987</div>
+          <div class='followers'>Followers</div>
+          <div class='today-evolution-up'>12 Today </div>
+        </div>
+        <div class='global-stats-item' id='global-twitter'>
+          <div class='tagname'><img src="./images/icon-twitter.svg" class='media-logo'>@nathanf</div>
+          <div class='followers-number'>1044</div>
+          <div class='followers'>Followers</div>
+          <div class='today-evolution-up'>99 Today </div>
+        </div>
+        <div class='global-stats-item' id='global-instagram'>
+          <div class='tagname'><img src="./images/icon-instagram.svg" class='media-logo'>  @realnathanf</div>
+          <div class='followers-number'> 11k</div>
+          <div class='followers'>Followers</div>
+          <div class='today-evolution-up'>1099  Today </div>
+        </div>
+        <div class='global-stats-item' id='global-youtube'>
+          <div class='tagname'><img src="./images/icon-youtube.svg" class='media-logo'>Nathan F.</div>
+          <div class='followers-number'> 8239</div>
+          <div class='followers'>Subscribers</div>
+          <div class='today-evolution-down'>144  Today </div>
+        </div>
+      </div>
+    </section>
+    <section class='today'>
+      <header class='today-header'>
+       <div class='today-title'>Overview - Today</div> 
+      </header>
+      <div class='today-stats'>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Page Views</div>
+          <div><img src="./images/icon-facebook.svg" class='media-logo'></div>
+          <div class='stats-number'>87</div>
+          <div class='today-evolution-up'>3%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Likes</div>
+          <div><img src="./images/icon-facebook.svg" class='media-logo'></div>
+          <div class='stats-number'>52</div>
+          <div class='today-evolution-down'>2%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Likes</div>
+          <div><img src="./images/icon-instagram.svg" class='media-logo'></div>
+          <div class='stats-number'>5462</div>
+          <div class='today-evolution-up'>2257%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Profile Views</div>
+          <div><img src="./images/icon-instagram.svg" class='media-logo'></div>
+          <div class='stats-number'>52k</div>
+          <div class='today-evolution-up'>1375%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Retweets</div>
+          <div><img src="./images/icon-twitter.svg" class='media-logo'></div>
+          <div class='stats-number'>117</div>
+          <div class='today-evolution-up'>303%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Likes</div>
+          <div><img src="./images/icon-twitter.svg" class='media-logo'></div>
+          <div class='stats-number'>507</div>
+          <div class='today-evolution-up'>553%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Likes</div>
+          <div><img src="./images/icon-youtube.svg" class='media-logo'></div>
+          <div class='stats-number'>107</div>
+          <div class='today-evolution-down'>19%</div>
+        </div>
+        <div class='today-stats-item'>
+          <div class='stats-description'>Total Views</div>
+          <div><img src="./images/icon-youtube.svg" class='media-logo'></div>
+          <div class='stats-number'>1407</div>
+          <div class='today-evolution-down'>12%</div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <script>
+    var dark = false;
+    var box = document.getElementById('checkBox');
+    var lightStyleSheet = document.querySelector("link[href='light.css']");
+    var darkStyleSheet = document.querySelector("link[href='dark.css']");
+    darkStyleSheet.disabled = true;
+
+        box.addEventListener('change', function(event){
+          dark = !dark;
+          if(this.checked){
+            lightStyleSheet.disabled = true;
+            darkStyleSheet.disabled = false;
+          }
+          else{
+            lightStyleSheet.disabled = false;
+            darkStyleSheet.disabled = true;
+          }
+    });
+
+  </script>
+</body>
+</html>
